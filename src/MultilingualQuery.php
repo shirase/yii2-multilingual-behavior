@@ -1,5 +1,5 @@
 <?php
-namespace omgdef\multilingual;
+namespace shirase\multilingual;
 
 use yii\db\ActiveQuery;
 

@@ -4,7 +4,7 @@ namespace tests;
 use tests\models\PostRequired;
 use Yii;
 use tests\models\Post;
-use omgdef\multilingual\MultilingualBehavior;
+use shirase\multilingual\MultilingualBehavior;
 
 class MultilingualBehaviorTest extends DatabaseTestCase
 {

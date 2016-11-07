@@ -5,7 +5,7 @@ use tests\models\PostRequired;
 use Yii;
 use yii\base\InvalidConfigException;
 use tests\models\PostAbridge as Post;
-use omgdef\multilingual\MultilingualBehavior;
+use shirase\multilingual\MultilingualBehavior;
 
 class MultilingualBehaviorAbridgeTest extends DatabaseTestCase
 {

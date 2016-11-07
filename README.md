@@ -2,15 +2,15 @@ Yii2 multilingual behavior
 ==========================
 Yii2 port of the [yii-multilingual-behavior](https://github.com/belerophon/yii-multilingual-behavior).
 
-[![Packagist Version](https://img.shields.io/packagist/v/omgdef/yii2-multilingual-behavior.svg?style=flat-square)](https://packagist.org/packages/omgdef/yii2-multilingual-behavior)
-[![Total Downloads](https://img.shields.io/packagist/dt/omgdef/yii2-multilingual-behavior.svg?style=flat-square)](https://packagist.org/packages/omgdef/yii2-multilingual-behavior)
-[![Build Status](https://img.shields.io/travis/OmgDef/yii2-multilingual-behavior/master.svg?style=flat-square)](https://travis-ci.org/OmgDef/yii2-multilingual-behavior)
-[![Code Quality](https://img.shields.io/scrutinizer/g/omgdef/yii2-multilingual-behavior/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/OmgDef/yii2-multilingual-behavior)
-[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/omgdef/yii2-multilingual-behavior/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/OmgDef/yii2-multilingual-behavior)
+[![Packagist Version](https://img.shields.io/packagist/v/shirase/yii2-multilingual-behavior.svg?style=flat-square)](https://packagist.org/packages/shirase/yii2-multilingual-behavior)
+[![Total Downloads](https://img.shields.io/packagist/dt/shirase/yii2-multilingual-behavior.svg?style=flat-square)](https://packagist.org/packages/shirase/yii2-multilingual-behavior)
+[![Build Status](https://img.shields.io/travis/shirase/yii2-multilingual-behavior/master.svg?style=flat-square)](https://travis-ci.org/shirase/yii2-multilingual-behavior)
+[![Code Quality](https://img.shields.io/scrutinizer/g/shirase/yii2-multilingual-behavior/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/shirase/yii2-multilingual-behavior)
+[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/shirase/yii2-multilingual-behavior/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/shirase/yii2-multilingual-behavior)
 
 This behavior allows you to create multilingual models and almost use them as normal models. Translations are stored in a separate table in the database (ex: PostLang or ProductLang) for each model, so you can add or remove a language easily, without modifying your database.
 
-**!!! IMPORTANT !!! Docs for vesions 1.* [here](https://github.com/OmgDef/yii2-multilingual-behavior/blob/f91d63403f02c8a3266796b41d197068d7ef7fbb/README.md)**
+**!!! IMPORTANT !!! Docs for vesions 1.* [here](https://github.com/shirase/yii2-multilingual-behavior/blob/f91d63403f02c8a3266796b41d197068d7ef7fbb/README.md)**
 
 **In vesion 2.* forceOverwrite property is deprecated**
 
@@ -51,13 +51,13 @@ Preferred way to install this extension is through [composer](http://getcomposer
 Either run
 
 ```
-php composer.phar require --prefer-dist omgdef/yii2-multilingual-behavior
+php composer.phar require shirase/yii2-multilingual-behavior
 ```
 
 or add
 
 ```
-"omgdef/yii2-multilingual-behavior": "~2.0"
+"shirase/yii2-multilingual-behavior": "dev-master"
 ```
 
 to the require section of your `composer.json` file.

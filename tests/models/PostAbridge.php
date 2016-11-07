@@ -2,8 +2,8 @@
 
 namespace tests\models;
 
-use \omgdef\multilingual\MultilingualBehavior;
-use \omgdef\multilingual\MultilingualQuery;
+use \shirase\multilingual\MultilingualBehavior;
+use \shirase\multilingual\MultilingualQuery;
 
 /**
  * Post

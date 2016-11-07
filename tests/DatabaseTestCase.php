@@ -1,6 +1,6 @@
 <?php
 /**
- * @link https://github.com/OmgDef/yii2-multilingual-behavior
+ * @link https://github.com/shirase/yii2-multilingual-behavior
  * @copyright Copyright (c) 2015 Alexander Kochetov
  * @license http://opensource.org/licenses/BSD-3-Clause
  */
