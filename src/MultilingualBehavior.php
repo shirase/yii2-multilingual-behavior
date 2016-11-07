@@ -266,7 +266,9 @@ class MultilingualBehavior extends Behavior
     public function beforeValidate()
     {
         foreach ($this->attributes as $attribute) {
-            $this->setLangAttribute($this->getAttributeName($attribute, $this->defaultLanguage), $this->getLangAttribute($attribute));
+            if (($v = $this->getLangAttribute($attribute)) !== null) {
+                $this->setLangAttribute($this->getAttributeName($attribute, $this->defaultLanguage), $v);
+            }
         }
     }
 
@@ -371,7 +373,11 @@ class MultilingualBehavior extends Behavior
 
             $save = false;
             foreach ($this->attributes as $attribute) {
-                $value = $defaultLanguage ? $owner->$attribute : $this->getLangAttribute($this->getAttributeName($attribute, $lang));
+                if ($defaultLanguage && ($v=$owner->$attribute)!==null) {
+                    $value = $v;
+                } else {
+                    $value = $this->getLangAttribute($this->getAttributeName($attribute, $lang));
+                }
 
                 if ($value !== null) {
                     $field = $this->localizedPrefix . $attribute;
