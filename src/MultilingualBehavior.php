@@ -215,9 +215,6 @@ class MultilingualBehavior extends Behavior
             foreach ($this->attributes as $attribute) {
                 $attributeName = $this->localizedPrefix . $attribute;
                 $this->setLangAttribute($this->getAttributeName($attribute, $lang), $translation->{$attributeName});
-                if ($lang == $this->defaultLanguage) {
-                    $this->setLangAttribute($attribute, $translation->{$attributeName});
-                }
             }
         }
     }
@@ -288,10 +285,6 @@ class MultilingualBehavior extends Behavior
                         if ($this->getLanguageBaseName($translation->{$this->languageField}) == $lang) {
                             $attributeName = $this->localizedPrefix . $attribute;
                             $this->setLangAttribute($this->getAttributeName($attribute, $lang), $translation->{$attributeName});
-
-                            if ($lang == $this->defaultLanguage) {
-                                $this->setLangAttribute($attribute, $translation->{$attributeName});
-                            }
                         }
                     }
                 }
@@ -460,6 +453,9 @@ class MultilingualBehavior extends Behavior
      */
     public function hasLangAttribute($name)
     {
+        if (array_search($name, $this->attributes) !== false) {
+            $name = $this->getAttributeName($name, $this->defaultLanguage);
+        }
         return array_key_exists($name, $this->langAttributes);
     }
 
@@ -469,6 +465,9 @@ class MultilingualBehavior extends Behavior
      */
     public function getLangAttribute($name)
     {
+        if (array_search($name, $this->attributes) !== false) {
+            $name = $this->getAttributeName($name, $this->defaultLanguage);
+        }
         return $this->hasLangAttribute($name) ? $this->langAttributes[$name] : null;
     }
 
@@ -478,6 +477,9 @@ class MultilingualBehavior extends Behavior
      */
     public function setLangAttribute($name, $value)
     {
+        if (array_search($name, $this->attributes) !== false) {
+            $name = $this->getAttributeName($name, $this->defaultLanguage);
+        }
         $this->langAttributes[$name] = $value;
     }
 
